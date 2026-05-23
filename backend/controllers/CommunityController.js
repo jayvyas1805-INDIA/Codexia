@@ -2,7 +2,7 @@ import Moderator from "../models/Moderator.js";
 import Community from "../models/Community.js";
 import User from "../models/User.js";
 import ActivityLog from "../models/ActivityLog.js";
-import CommunityMember from "../models/communityMember.js";
+import CommunityMember from "../models/CommunityMember.js";
 
 export const createCommunity = async (req, res) => {
   try {
