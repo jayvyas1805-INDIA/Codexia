@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "../styles/dashboard-layout.css";
 
-const MAIN_APP_URL = "http://localhost:5173/feed";
+const MAIN_APP_URL = import.meta.env.VITE_main_url || "http://localhost:5173/feed";
 
 export default function DashboardLayout({ children, pendingReports = 0 }) {
   const [sidebarOpen, setSidebarOpen] = useState(true);
