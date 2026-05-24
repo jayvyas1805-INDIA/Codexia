@@ -3,8 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../App";
 import { CommunityAPI } from "../lib/storage";
 
-const ADMIN_DASHBOARD_URL = "http://localhost:5172";
-const MODERATOR_DASHBOARD_URL = "http://localhost:5174";
+const ADMIN_DASHBOARD_URL = import.meta.env.VITE_ADMIN_DASHBOARD_URL || "http://localhost:5172";
+const MODERATOR_DASHBOARD_URL = import.meta.env.VITE_MODERATOR_DASHBOARD_URL || "http://localhost:5174";
 
 export default function Navbar() {
   const { user, logout } = useContext(AuthContext);
